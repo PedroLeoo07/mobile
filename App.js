@@ -95,23 +95,23 @@ const styles = StyleSheet.create({
   input: {
     width: "90%",
     borderWidth: 1,
-    borderColor: "#fff",
+    borderColor: "#000000",
     borderRadius: 5,
     padding: 10,
-    backgroundColor: "#F69B4",
+    backgroundColor: "#FF0000",
     marginBottom: 10,
   },
   warningText: {
-    color: "green",
+    color: "pink",
     fontSize: 16,
   },
   successText: {
-    color: "green",
+    color: "pink",
     fontSize: 16,
     marginBottom: 20,
   },
   button: {
-    backgroundColor: "black",
+    backgroundColor: "red",
     width: "90%",
     padding: 10,
     marginTop: 10,
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "white",
+    color: "black",
     fontSize: 18,
     fontWeight: "bold",
   },

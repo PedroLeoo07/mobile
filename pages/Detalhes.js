@@ -14,7 +14,7 @@ export default function Detalhes() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: "#FF1493",
         alignItems: "center",
         justifyContent: "center",
         padding: 20,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     textRed: {
-        color: "green",
+        color: "black",
         fontSize: 16,
     },
     textGreen: {

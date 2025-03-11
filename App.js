@@ -81,7 +81,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F0F0F0",
+    backgroundColor: "#FF1493",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -95,10 +95,10 @@ const styles = StyleSheet.create({
   input: {
     width: "90%",
     borderWidth: 1,
-    borderColor: "#CCC",
+    borderColor: "#fff",
     borderRadius: 5,
     padding: 10,
-    backgroundColor: "#FFF",
+    backgroundColor: "#F69B4",
     marginBottom: 10,
   },
   warningText: {

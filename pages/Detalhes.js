@@ -1,56 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import * as SecureStore from "expo-secure-store";
 
-const TextoExibido = ({ titulo, texto, cor }) => (
-    <Text style={[styles.texto, { color: cor }]}>
-        {titulo}: {texto || "Nenhum texto salvo"}
-    </Text>
-);
-
-export default function DetalhesScreen({ route }) {
-
-    const { textoNaoPersistido } = route.params || {};
-    const [textoPersistido, setTextoPersistido] = useState("");
-
-    useEffect(() => {
-        const carregarTextoPersistido = async () => {
- 
-            const textoSalvo = await SecureStore.getItemAsync("meuTexto");
-            if (textoSalvo) {
-
-                setTextoPersistido(textoSalvo);
-            }
-        };
-        carregarTextoPersistido();
-    }, []);
-
+export default function Detalhes() {
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Detalhes</Text>
-            <TextoExibido titulo="Sem persistência" texto={textoNaoPersistido} cor="red" />
-             <TextoExibido titulo="Persistência" texto={textoPersistido} cor="green" />
+            <Text style={styles.title}>Detalhes</Text>
+            <Text style={styles.textRed}>Sem persistência: Nenhum texto salvo</Text>
+            <Text style={styles.textGreen}>Persistência: Nenhum texto salvo</Text>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-
     container: {
         flex: 1,
-        gap: 50,
-        paddingVertical: 100, 
-        paddingHorizontal: 25, 
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 20,
     },
-
-    titulo: {
-        fontSize: 32, 
-        textAlign: "center", 
-        textDecorationLine: "underline", 
+    title: {
+        fontSize: 22,
+        fontWeight: "bold",
+        marginBottom: 20,
     },
-
-    texto: {
-        fontSize: 20, 
-        textAlign: "center", 
+    textRed: {
+        color: "green",
+        fontSize: 16,
+    },
+    textGreen: {
+        color: "red",
+        fontSize: 16,
     },
 });
